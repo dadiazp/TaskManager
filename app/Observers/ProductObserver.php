@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Observers;
+use App\Repository\InvoiceRepository;
+
+use App\Models\Product;
+
+class ProductObserver
+{
+    /**
+     * Handle the Product "created" event.
+     *
+     * @param  \App\Models\Product  $product
+     * @return void
+     */
+    public function created(Product $product)
+    {
+        $repository = new InvoiceRepository();
+        $actualInvoiceAmount = $repository->getById($product->invoice_id)->total ? $repository->getById($product->invoice_id)->total : 0;
+        $newInvoiceAmount = $actualInvoiceAmount + $product->quantity * $product->price;
+
+        $repository->updateTotal($product->invoice_id, $newInvoiceAmount);
+    }
+
+    /**
+     * Handle the Product "updated" event.
+     *
+     * @param  \App\Models\Product  $product
+     * @return void
+     */
+    public function updated(Product $product)
+    {
+        //
+    }
+
+    /**
+     * Handle the Product "deleted" event.
+     *
+     * @param  \App\Models\Product  $product
+     * @return void
+     */
+    public function deleted(Product $product)
+    {
+        //
+    }
+
+    /**
+     * Handle the Product "restored" event.
+     *
+     * @param  \App\Models\Product  $product
+     * @return void
+     */
+    public function restored(Product $product)
+    {
+        //
+    }
+
+    /**
+     * Handle the Product "force deleted" event.
+     *
+     * @param  \App\Models\Product  $product
+     * @return void
+     */
+    public function forceDeleted(Product $product)
+    {
+        //
+    }
+}
