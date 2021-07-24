@@ -1,62 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# TaskManager
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyecto compuesto de los distintos desafios propuestos para el mismo.
 
-## About Laravel
+En la estructura del mismo se encuentran las respuestas a los desafios 1, 3 y 5.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* [InvoiceController.php] -> Desafios 1 y 3
+* [Tasks.php] -> Desafio 5
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Comenzando 🚀
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local._
 
-## Learning Laravel
+### Pre-requisitos 📋
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+_Para ejecutar localmente en primer lugar clone este repositorio y obtenga los ultimos cambios._
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+_No olvides crear tu .env y generar una key._
 
-## Laravel Sponsors
+```
+php artisan key:generate
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+_Crea tu base de datos locaL. Este proyecto en particular usó postgress como Sistema gestor de base de datos, pero perfectamente es funcional
+con cualquier otro sistema relacional_.
 
-### Premium Partners
+_Una vez creada tu base de datos recuerda añadir las credenciales en el .env al igual que cambiar el nombre de la conexión en config/database.php segun tu manejador de base de datos._
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+_Finalmente, ya solo queda correr las migraciones y seeds._
 
-## Contributing
+```
+php artisan migrate:refresh --seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Despliegue 📦
 
-## Code of Conduct
+_Para correr el proyecto inicia el servidor de tu preferencia, bien sea Laragon, Wamp, Xamp, Mamp, etc._
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Construido con 🛠️
 
-## Security Vulnerabilities
+* [Laravel 8.12](https://laravel.com/docs/8.x) - El framework web usado
+* [Livewire 2.5](https://laravel-livewire.com/docs/2.x/quickstart) - Scaffolding utilizado para este proyecto
+* [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Framework CSS
+* [MySQL](https://dev.mysql.com/doc/) - Manejador de Base de datos
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+## Autores ✒️
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* **Daniel Díaz** - [dadiazp](https://github.com/dadiazp)
+
+---
+⌨️ con ❤️ por [dadiazp](https://github.com/dadiazp) 😊
