@@ -38,7 +38,7 @@ _Para correr el proyecto inicia el servidor de tu preferencia, bien sea Laragon,
 
 ## Construido con 🛠️
 
-* [Laravel 8.12](https://laravel.com/docs/8.x) - El framework web usado
+* [Laravel 8.4](https://laravel.com/docs/8.x) - El framework web usado
 * [Livewire 2.5](https://laravel-livewire.com/docs/2.x/quickstart) - Scaffolding utilizado para este proyecto
 * [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Framework CSS
 * [MySQL](https://dev.mysql.com/doc/) - Manejador de Base de datos
